@@ -1,1 +1,1 @@
-# Softuni-AngularWorkshop-FurnitureSystem-Server
+# Softuni-AngularWorkshop-FurnitureSystem
