@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softuni-AngularWorkshop-FurnitureSystem-Server.All.Core", ".\Softuni-AngularWorkshop-FurnitureSystem-Server.All.Core\Softuni-AngularWorkshop-FurnitureSystem-Server.All.Core.csproj", "{7A6CD5EB-E7CB-4F40-BECC-E9D96815ADC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softuni-AngularWorkshop-FurnitureSystem-Server.All.Services", ".\Softuni-AngularWorkshop-FurnitureSystem-Server.All.Services\Softuni-AngularWorkshop-FurnitureSystem-Server.All.Services.csproj", "{B3C530EB-8403-459C-95CB-D0A89CCFB2F3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softuni-AngularWorkshop-FurnitureSystem-Server.Persistence", ".\Softuni-AngularWorkshop-FurnitureSystem-Server.Persistence\Softuni-AngularWorkshop-FurnitureSystem-Server.Persistence.csproj", "{34DC0D70-B6FB-4D4B-9714-8E061D8FE27F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Core", ".\Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Core\Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Core.csproj", "{27615617-6355-47E6-9A39-CCF0C8D8DB53}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Services", ".\Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Services\Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Services.csproj", "{0F7A1AD1-F734-44B0-B97C-2E9D8B5998D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softuni-AngularWorkshop-FurnitureSystem-Server.Web.WebAPI", ".\Softuni-AngularWorkshop-FurnitureSystem-Server.Web.WebAPI\Softuni-AngularWorkshop-FurnitureSystem-Server.Web.WebAPI.csproj", "{F4B089B6-5219-448B-A68C-0AD103324B9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A6CD5EB-E7CB-4F40-BECC-E9D96815ADC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A6CD5EB-E7CB-4F40-BECC-E9D96815ADC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A6CD5EB-E7CB-4F40-BECC-E9D96815ADC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A6CD5EB-E7CB-4F40-BECC-E9D96815ADC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3C530EB-8403-459C-95CB-D0A89CCFB2F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3C530EB-8403-459C-95CB-D0A89CCFB2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3C530EB-8403-459C-95CB-D0A89CCFB2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3C530EB-8403-459C-95CB-D0A89CCFB2F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34DC0D70-B6FB-4D4B-9714-8E061D8FE27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34DC0D70-B6FB-4D4B-9714-8E061D8FE27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34DC0D70-B6FB-4D4B-9714-8E061D8FE27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34DC0D70-B6FB-4D4B-9714-8E061D8FE27F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27615617-6355-47E6-9A39-CCF0C8D8DB53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27615617-6355-47E6-9A39-CCF0C8D8DB53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27615617-6355-47E6-9A39-CCF0C8D8DB53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27615617-6355-47E6-9A39-CCF0C8D8DB53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F7A1AD1-F734-44B0-B97C-2E9D8B5998D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F7A1AD1-F734-44B0-B97C-2E9D8B5998D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F7A1AD1-F734-44B0-B97C-2E9D8B5998D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F7A1AD1-F734-44B0-B97C-2E9D8B5998D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B089B6-5219-448B-A68C-0AD103324B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B089B6-5219-448B-A68C-0AD103324B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B089B6-5219-448B-A68C-0AD103324B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B089B6-5219-448B-A68C-0AD103324B9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1ABA99EF-A791-405F-AD77-335A458A3A67}
+	EndGlobalSection
+EndGlobal
