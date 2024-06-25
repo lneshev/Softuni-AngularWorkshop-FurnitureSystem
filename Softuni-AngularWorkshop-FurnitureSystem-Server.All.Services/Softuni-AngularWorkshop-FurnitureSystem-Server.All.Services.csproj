@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Softuni_AngularWorkshop_FurnitureSystem_Server.All.Services</RootNamespace>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.1.39" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.6" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Softuni-AngularWorkshop-FurnitureSystem-Server.All.Core\Softuni-AngularWorkshop-FurnitureSystem-Server.All.Core.csproj" />
+    <ProjectReference Include="..\Softuni-AngularWorkshop-FurnitureSystem-Server.Persistence\Softuni-AngularWorkshop-FurnitureSystem-Server.Persistence.csproj" />
+    <ProjectReference Include="..\Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Core\Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Core.csproj" />
+  </ItemGroup>
+
+</Project>
