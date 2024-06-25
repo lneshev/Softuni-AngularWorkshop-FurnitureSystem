@@ -1,0 +1,16 @@
+img {
+    max-height: 200px;
+}
+
+.card-body {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+blockquote {
+    margin: 0;
+}
+
+.btn.btn-info {
+    margin-right: 1px;
+}
