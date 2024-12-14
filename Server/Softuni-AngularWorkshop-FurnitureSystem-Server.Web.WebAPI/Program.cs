@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
@@ -31,7 +32,8 @@ using Softuni_AngularWorkshop_FurnitureSystem_Server.Web.Core.Models.Furniture;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.Web.Services.Furniture;
 using System;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder();
+builder.WebHost.CaptureStartupErrors(true);
 string connectionString = builder.Configuration.GetConnectionString("Default");
 
 // Add services to the container.
