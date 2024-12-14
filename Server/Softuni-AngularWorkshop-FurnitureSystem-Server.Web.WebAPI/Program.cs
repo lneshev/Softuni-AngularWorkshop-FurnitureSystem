@@ -106,6 +106,10 @@ builder.Services
             options.UseSqlServer(connectionString, x =>
             {
                 x.CommandTimeout((int)TimeSpan.FromMinutes(3).TotalSeconds);
+            })
+            .UseAsyncSeeding(async (appDbContext, storeOperationPerformed, ct) =>
+            {
+                await DbSeeder.SeedAppDbAsync((AppDbContext)appDbContext);
             });
         }, ServiceLifetime.Scoped)
         .AddIdentity<UserEntity, RoleEntity>(options =>

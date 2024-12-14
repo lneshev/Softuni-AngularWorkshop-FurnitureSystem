@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MoravianStar" Version="1.24.1" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Softuni-AngularWorkshop-FurnitureSystem-Server.All.Core\Softuni-AngularWorkshop-FurnitureSystem-Server.All.Core.csproj" />
   </ItemGroup>
 

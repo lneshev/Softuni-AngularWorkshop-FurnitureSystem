@@ -20,7 +20,8 @@ namespace Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.6")
+                .UseCollation("SQL_Latin1_General_CP1_CS_AS")
+                .HasAnnotation("ProductVersion", "9.0.0")
                 .HasAnnotation("Proxies:ChangeTracking", false)
                 .HasAnnotation("Proxies:CheckEquality", false)
                 .HasAnnotation("Proxies:LazyLoading", true)
@@ -114,7 +115,7 @@ namespace Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.Migrations
 
                     b.ToTable("AspNetUserRoles", (string)null);
 
-                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUserRole<Guid>");
+                    b.HasDiscriminator().HasValue("IdentityUserRole<Guid>");
 
                     b.UseTphMappingStrategy();
                 });
