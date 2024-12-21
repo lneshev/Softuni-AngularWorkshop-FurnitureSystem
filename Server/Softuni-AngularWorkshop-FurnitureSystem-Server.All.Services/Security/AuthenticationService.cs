@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using MoravianStar.Exceptions;
+using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Configuration;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Constants.Security;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.DTOs.Security;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Entities.Security;
@@ -17,15 +19,18 @@ namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.Services.Security
 {
     public class AuthenticationService : IAuthenticationService
     {
+        private readonly AuthenticationConfiguration authenticationConfiguration;
         private readonly UserManager<UserEntity> userManager;
         private readonly SignInManager<UserEntity> signInManager;
         private readonly SigningConfigurationService signingConfigurationService;
 
         public AuthenticationService(
+            IOptions<AuthenticationConfiguration> authenticationConfiguration,
             UserManager<UserEntity> userManager,
             SignInManager<UserEntity> signInManager,
             SigningConfigurationService signingConfigurationService)
         {
+            this.authenticationConfiguration = authenticationConfiguration.Value ?? throw new ArgumentNullException(nameof(AuthenticationConfiguration));
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.signingConfigurationService = signingConfigurationService;
@@ -100,17 +105,18 @@ namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.Services.Security
 
         private async Task<AccessTokenModel> BuildAccessTokenAsync(UserEntity user)
         {
-            var accessTokenExpiration = DateTime.UtcNow.AddYears(1);
+            var accessTokenExpiration = DateTime.UtcNow.AddSeconds(authenticationConfiguration.AccessTokenExpiration);
             var handler = new JwtSecurityTokenHandler();
+            var now = DateTime.UtcNow;
             var tokenDescriptor = new SecurityTokenDescriptor()
             {
                 Subject = new ClaimsIdentity(await GetUserClaimsAsync(user)),
                 Claims = null,
-                Issuer = "http://localhost:5000",
-                Audience = "SoftuniFurnitureWorkshopAudience",
+                Issuer = authenticationConfiguration.Issuer,
+                Audience = authenticationConfiguration.Audience,
                 Expires = accessTokenExpiration,
-                IssuedAt = DateTime.UtcNow,
-                NotBefore = DateTime.UtcNow,
+                IssuedAt = now,
+                NotBefore = now,
                 SigningCredentials = signingConfigurationService.SigningCredentials
             };
             var securityToken = handler.CreateToken(tokenDescriptor);

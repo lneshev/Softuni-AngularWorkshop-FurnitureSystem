@@ -1,5 +1,7 @@
-﻿using Microsoft.IdentityModel.Tokens;
-using System.Security.Cryptography;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Configuration;
+using System.Text;
 
 namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.Services.Security
 {
@@ -9,14 +11,14 @@ namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.Services.Security
 
         public SigningCredentials SigningCredentials { get; }
 
-        public SigningConfigurationService()
+        public SigningConfigurationService(IConfiguration configuration)
         {
-            using (var provider = new RSACryptoServiceProvider(2048))
-            {
-                Key = new RsaSecurityKey(provider.ExportParameters(true));
-            }
+            var authenticationConfigSection = configuration.GetSection(nameof(AuthenticationConfiguration));
+            var authenticationConfig = authenticationConfigSection.Get<AuthenticationConfiguration>();
+            var secretKey = Encoding.UTF8.GetBytes(authenticationConfig.SecretKey);
 
-            SigningCredentials = new SigningCredentials(Key, SecurityAlgorithms.RsaSha256Signature);
+            Key = new SymmetricSecurityKey(secretKey);
+            SigningCredentials = new SigningCredentials(Key, SecurityAlgorithms.HmacSha256Signature);
         }
     }
 }

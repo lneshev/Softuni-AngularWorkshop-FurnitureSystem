@@ -18,6 +18,7 @@ using MoravianStar.WebAPI.JsonConverters;
 using MoravianStar.WebAPI.ModelBinders;
 using MoravianStar.WebAPI.Swagger;
 using MoravianStar.WebAPI.Transformers;
+using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Configuration;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Entities.Furniture;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Entities.Security;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Services.Common;
@@ -34,7 +35,13 @@ using System;
 
 var builder = WebApplication.CreateBuilder();
 builder.WebHost.CaptureStartupErrors(true);
+var configuration = builder.Configuration;
+
 string connectionString = builder.Configuration.GetConnectionString("Default");
+
+var authenticationConfigSection = configuration.GetSection(nameof(AuthenticationConfiguration));
+builder.Services.Configure<AuthenticationConfiguration>(authenticationConfigSection);
+var authenticationConfig = authenticationConfigSection.Get<AuthenticationConfiguration>();
 
 // Add services to the container.
 
@@ -58,7 +65,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
-var signingConfigurationService = new SigningConfigurationService();
+var signingConfigurationService = new SigningConfigurationService(builder.Configuration);
 builder.Services.AddSingleton(signingConfigurationService);
 
 var jwtEventHandlers = new JwtEventHandlers();
@@ -89,8 +96,8 @@ builder.Services
                 ValidateAudience = true,
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
-                ValidIssuer = "http://localhost:5000",
-                ValidAudience = "SoftuniFurnitureWorkshopAudience",
+                ValidIssuer = authenticationConfig.Issuer,
+                ValidAudience = authenticationConfig.Audience,
                 IssuerSigningKey = signingConfigurationService.Key,
                 ClockSkew = TimeSpan.Zero
             };
