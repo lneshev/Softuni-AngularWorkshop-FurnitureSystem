@@ -1,4 +1,4 @@
-﻿using System.IdentityModel.Tokens.Jwt;
+﻿using Microsoft.IdentityModel.JsonWebTokens;
 using System.Security.Claims;
 
 namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Constants.Security
