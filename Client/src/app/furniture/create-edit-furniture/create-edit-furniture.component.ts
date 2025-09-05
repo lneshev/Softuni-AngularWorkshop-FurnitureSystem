@@ -5,11 +5,10 @@ import { FurnitureService } from '../furniture.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-create-furniture',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './create-edit-furniture.component.html',
-  styleUrl: './create-edit-furniture.component.css'
+    selector: 'app-create-furniture',
+    imports: [CommonModule, ReactiveFormsModule],
+    templateUrl: './create-edit-furniture.component.html',
+    styleUrl: './create-edit-furniture.component.css'
 })
 export class CreateEditFurnitureComponent implements OnInit {
   id: number;

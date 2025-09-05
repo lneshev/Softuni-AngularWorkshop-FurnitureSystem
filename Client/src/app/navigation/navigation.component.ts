@@ -6,11 +6,10 @@ import { DropdownDirective } from './dropdown.directive';
 import { CollapseDirective } from './collapse.directive';
 
 @Component({
-  selector: 'app-navigation',
-  standalone: true,
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.css'],
-  imports: [CommonModule, RouterModule, DropdownDirective, CollapseDirective]
+    selector: 'app-navigation',
+    templateUrl: './navigation.component.html',
+    styleUrls: ['./navigation.component.css'],
+    imports: [CommonModule, RouterModule, DropdownDirective, CollapseDirective]
 })
 export class NavigationComponent implements OnInit {
   constructor(

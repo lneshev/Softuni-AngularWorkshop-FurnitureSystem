@@ -5,11 +5,10 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-signup',
-  standalone: true,
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css'],
-  imports: [CommonModule, FormsModule]
+    selector: 'app-signup',
+    templateUrl: './signup.component.html',
+    styleUrls: ['./signup.component.css'],
+    imports: [CommonModule, FormsModule]
 })
 export class SignupComponent implements OnInit {
   @ViewChild('registerForm') registerForm: NgForm;

@@ -9,11 +9,10 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-signin',
-  standalone: true,
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css'],
-  imports: [CommonModule, FormsModule]
+    selector: 'app-signin',
+    templateUrl: './signin.component.html',
+    styleUrls: ['./signin.component.css'],
+    imports: [CommonModule, FormsModule]
 })
 export class SigninComponent implements OnInit {
   @ViewChild('loginForm') loginForm: NgForm;

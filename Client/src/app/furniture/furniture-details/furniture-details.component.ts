@@ -5,11 +5,10 @@ import { Furniture } from '../../models/furniture';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-furniture-details',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './furniture-details.component.html',
-  styleUrl: './furniture-details.component.css'
+    selector: 'app-furniture-details',
+    imports: [CommonModule],
+    templateUrl: './furniture-details.component.html',
+    styleUrl: './furniture-details.component.css'
 })
 export class FurnitureDetailsComponent implements OnInit {
   furniture: Furniture;

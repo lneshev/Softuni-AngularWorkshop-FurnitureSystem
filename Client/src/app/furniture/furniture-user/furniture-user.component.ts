@@ -5,11 +5,10 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-furniture-user',
-  standalone: true,
-  imports: [CommonModule, RouterLink],
-  templateUrl: './furniture-user.component.html',
-  styleUrl: './furniture-user.component.css'
+    selector: 'app-furniture-user',
+    imports: [CommonModule, RouterLink],
+    templateUrl: './furniture-user.component.html',
+    styleUrl: './furniture-user.component.css'
 })
 export class FurnitureUserComponent implements OnInit {
   furnitures: Furniture[]

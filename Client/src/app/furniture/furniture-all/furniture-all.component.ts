@@ -6,11 +6,10 @@ import { RouterLink } from '@angular/router';
 import { AuthService } from '../../authentication/auth.service';
 
 @Component({
-  selector: 'app-furniture-all',
-  standalone: true,
-  imports: [CommonModule, RouterLink],
-  templateUrl: './furniture-all.component.html',
-  styleUrl: './furniture-all.component.css'
+    selector: 'app-furniture-all',
+    imports: [CommonModule, RouterLink],
+    templateUrl: './furniture-all.component.html',
+    styleUrl: './furniture-all.component.css'
 })
 export class FurnitureAllComponent implements OnInit {
   furnitures: Furniture[]
