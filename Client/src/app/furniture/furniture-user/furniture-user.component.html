@@ -1,43 +1,45 @@
 <div class="container">
-    <div class="row space-top">
-        <div class="col-md-12">
-            <h1>Profile Page</h1>
-            <p>Listing your furniture.</p>
-        </div>
+  <div class="row space-top">
+    <div class="col-md-12">
+      <h1>Profile Page</h1>
+      <p>Listing your furniture.</p>
     </div>
+  </div>
 
-    <ng-template [ngIf]="!furnitures">
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 text-center">Loading...</div>
-            <div class="col-md-4"></div>
-        </div>
-    </ng-template>
+  @if (!furnitures) {
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 text-center">Loading...</div>
+      <div class="col-md-4"></div>
+    </div>
+  }
 
-    <ng-template [ngIf]="furnitures && furnitures.length === 0">
-        <div class="row space-top">
-            <div class="col-md-12">
-                No furnitures
-            </div>
-        </div>
-    </ng-template>
+  @if (furnitures && furnitures.length === 0) {
+    <div class="row space-top">
+      <div class="col-md-12">
+        No furnitures
+      </div>
+    </div>
+  }
 
-    <ng-template [ngIf]="furnitures && furnitures.length > 0">
-        <div class="row space-top">
-            <div class="col-md-4" *ngFor="let f of furnitures">
-                <div class="card text-white bg-primary">
-                    <div class="card-body">
-                        <blockquote class="card-blockquote">
-                            <img src="{{f.image}}" />
-                            <p>{{f.description}}</p>
-                            <div class="pull-right">
-                                <a [routerLink]="['/furniture/details/', f.id]" class="btn btn-info">Details</a>
-                                <a (click)="deleteFurniture(f.id)" class="btn btn-danger">Delete</a>
-                            </div>
-                        </blockquote>
-                    </div>
+  @if (furnitures && furnitures.length > 0) {
+    <div class="row space-top">
+      @for (f of furnitures; track f.id) {
+        <div class="col-md-4">
+          <div class="card text-white bg-primary">
+            <div class="card-body">
+              <blockquote class="card-blockquote">
+                <img src="{{f.image}}" />
+                <p>{{f.description}}</p>
+                <div class="pull-right">
+                  <a [routerLink]="['/furniture/details/', f.id]" class="btn btn-info">Details</a>
+                  <a (click)="deleteFurniture(f.id)" class="btn btn-danger">Delete</a>
                 </div>
+              </blockquote>
             </div>
+          </div>
         </div>
-    </ng-template>
+      }
+    </div>
+  }
 </div>

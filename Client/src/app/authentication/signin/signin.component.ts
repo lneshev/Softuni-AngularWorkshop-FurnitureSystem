@@ -6,13 +6,13 @@ import {
 import { FormsModule, NgForm } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'app-signin',
     templateUrl: './signin.component.html',
     styleUrls: ['./signin.component.css'],
-    imports: [CommonModule, FormsModule]
+    imports: [FormsModule]
 })
 export class SigninComponent implements OnInit {
   @ViewChild('loginForm') loginForm: NgForm;

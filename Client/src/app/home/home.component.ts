@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../authentication/auth.service';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'app-home',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css']
 })

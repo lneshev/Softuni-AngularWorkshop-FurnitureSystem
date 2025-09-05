@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Furniture } from '../../models/furniture';
 import { FurnitureService } from '../furniture.service';
-import { CommonModule } from '@angular/common';
+
 import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-furniture-user',
-    imports: [CommonModule, RouterLink],
+    imports: [RouterLink],
     templateUrl: './furniture-user.component.html',
     styleUrl: './furniture-user.component.css'
 })

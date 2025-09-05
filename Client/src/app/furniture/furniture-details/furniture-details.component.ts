@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FurnitureService } from '../furniture.service';
 import { Furniture } from '../../models/furniture';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'app-furniture-details',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './furniture-details.component.html',
     styleUrl: './furniture-details.component.css'
 })
