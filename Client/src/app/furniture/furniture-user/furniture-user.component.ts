@@ -5,13 +5,13 @@ import { FurnitureService } from '../furniture.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
-    selector: 'app-furniture-user',
-    imports: [RouterLink],
-    templateUrl: './furniture-user.component.html',
-    styleUrl: './furniture-user.component.css'
+  selector: 'app-furniture-user',
+  imports: [RouterLink],
+  templateUrl: './furniture-user.component.html',
+  styleUrl: './furniture-user.component.css'
 })
 export class FurnitureUserComponent implements OnInit {
-  furnitures: Furniture[]
+  furnitures: Furniture[];
 
   constructor(private furnitureService: FurnitureService) {
   }
@@ -21,8 +21,13 @@ export class FurnitureUserComponent implements OnInit {
   }
 
   getFurnituresForUser() {
-    this.furnitureService.getFurnituresForUser().subscribe((data: any) => {
-      this.furnitures = data.items;
+    this.furnitureService.getFurnituresForUser().subscribe({
+      next: (data: any) => {
+        this.furnitures = data.items;
+      },
+      error: () => {
+        this.furnitures = [];
+      }
     });
   }
 

@@ -6,13 +6,13 @@ import { RouterLink } from '@angular/router';
 import { AuthService } from '../../authentication/auth.service';
 
 @Component({
-    selector: 'app-furniture-all',
-    imports: [CommonModule, RouterLink],
-    templateUrl: './furniture-all.component.html',
-    styleUrl: './furniture-all.component.css'
+  selector: 'app-furniture-all',
+  imports: [CommonModule, RouterLink],
+  templateUrl: './furniture-all.component.html',
+  styleUrl: './furniture-all.component.css'
 })
 export class FurnitureAllComponent implements OnInit {
-  furnitures: Furniture[]
+  furnitures: Furniture[];
   isUserAdmin: boolean;
 
   constructor(private furnitureService: FurnitureService, private authService: AuthService) {
@@ -25,8 +25,13 @@ export class FurnitureAllComponent implements OnInit {
 
   getAllFurnitures() {
     setTimeout(() => {
-      this.furnitureService.getAllFurnitures().subscribe((data: any) => {
-        this.furnitures = data.items;
+      this.furnitureService.getAllFurnitures().subscribe({
+        next: (data: any) => {
+          this.furnitures = data.items;
+        },
+        error: () => {
+          this.furnitures = [];
+        }
       });
     }, 1000);
   }
