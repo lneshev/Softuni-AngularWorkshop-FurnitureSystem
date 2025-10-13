@@ -2,7 +2,8 @@
 
 This is the finished Angular workshop for "Furniture system" from Softuni's Angular course 2019.
 
-It has two projects: client and server:
+It has three projects: two clients and a server:
 
-- The client is written in Angular 20.
+- The first client is written in Angular 20.
+- The second client is written in React 18 via Vite and it is a visual clone of the Angular client.
 - The server is rewritten in .NET 9 (WebAPI), with the help of Moravian Star. The database is MS SQL.

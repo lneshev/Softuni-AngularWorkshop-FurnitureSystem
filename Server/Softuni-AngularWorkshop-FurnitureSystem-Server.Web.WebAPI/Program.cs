@@ -76,7 +76,7 @@ builder.Services.AddCors(options =>
         builder =>
         {
             builder
-                .WithOrigins("http://localhost:4200") // TODO: Add urls, that are defined in appsettings.json
+                .WithOrigins("http://localhost:4200", "http://localhost:5173") // TODO: Add urls, that are defined in appsettings.json
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials();
