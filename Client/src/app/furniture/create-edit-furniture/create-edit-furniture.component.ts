@@ -23,7 +23,7 @@ export class CreateEditFurnitureComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loading = true;
+    this.loading = false;
     this.form = this.fb.group({
       id: [0],
       make: ['', [Validators.required, Validators.minLength(4)]],
@@ -38,6 +38,7 @@ export class CreateEditFurnitureComponent implements OnInit {
     this.route.params.subscribe((data) => {
       this.id = data['id'];
       if (this.id) {
+        this.loading = true;
         this.furnitureService.getFurniture(this.id).subscribe({
           next: (data) => {
             this.form.patchValue(data);
