@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FurnitureService } from '../furniture.service';
@@ -53,14 +52,12 @@ export class CreateEditFurnitureComponent implements OnInit {
   }
 
   createFurniture() {
-    console.log(this.form);
     this.furnitureService.createFurniture(this.form.value).subscribe((data) => {
       this.router.navigate(['/furniture/all'])
     });
   }
 
   editFurniture() {
-    console.log(this.form);
     this.furnitureService.editFurniture(this.id, this.form.value).subscribe((data) => {
       this.router.navigate(['/furniture/all'])
     });

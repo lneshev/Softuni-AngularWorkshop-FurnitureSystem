@@ -3,12 +3,11 @@ import { AuthService } from '../auth.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
-
 @Component({
-    selector: 'app-signup',
-    templateUrl: './signup.component.html',
-    styleUrls: ['./signup.component.css'],
-    imports: [FormsModule]
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css'],
+  imports: [FormsModule]
 })
 export class SignupComponent implements OnInit {
   @ViewChild('registerForm') registerForm: NgForm;
@@ -25,9 +24,7 @@ export class SignupComponent implements OnInit {
     this.authService
       .register(this.registerForm.value)
       .subscribe((data) => {
-        console.log(data);
-
-        this.router.navigate([ '/signin' ]);
+        this.router.navigate(['/signin']);
       });
   }
 }
