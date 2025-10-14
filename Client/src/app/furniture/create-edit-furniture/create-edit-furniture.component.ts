@@ -5,30 +5,32 @@ import { FurnitureService } from '../furniture.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-    selector: 'app-create-furniture',
-    imports: [ReactiveFormsModule],
-    templateUrl: './create-edit-furniture.component.html',
-    styleUrl: './create-edit-furniture.component.css'
+  selector: 'app-create-furniture',
+  imports: [ReactiveFormsModule],
+  templateUrl: './create-edit-furniture.component.html',
+  styleUrl: './create-edit-furniture.component.css'
 })
 export class CreateEditFurnitureComponent implements OnInit {
   id: number;
   form: any;
+  loading: boolean;
 
   constructor(
     private route: ActivatedRoute,
     private fb: FormBuilder,
-    private furnitureService:FurnitureService,
+    private furnitureService: FurnitureService,
     private router: Router) {
   }
 
   ngOnInit(): void {
+    this.loading = true;
     this.form = this.fb.group({
       id: [0],
       make: ['', [Validators.required, Validators.minLength(4)]],
       model: ['', [Validators.required, Validators.minLength(4)]],
-      year: ['', [Validators.required, Validators.min(1950), Validators.max(2050)]],
+      year: [0, [Validators.required, Validators.min(1950), Validators.max(2050)]],
       description: ['', [Validators.required, Validators.minLength(10)]],
-      price: ['', [Validators.required, Validators.min(0)]],
+      price: [0, [Validators.required, Validators.min(0)]],
       image: ['', [Validators.required]],
       material: ['']
     });
@@ -36,8 +38,14 @@ export class CreateEditFurnitureComponent implements OnInit {
     this.route.params.subscribe((data) => {
       this.id = data['id'];
       if (this.id) {
-        this.furnitureService.getFurniture(this.id).subscribe(data => {
-          this.form.patchValue(data);
+        this.furnitureService.getFurniture(this.id).subscribe({
+          next: (data) => {
+            this.form.patchValue(data);
+            this.loading = false;
+          },
+          error: () => {
+            this.loading = false;
+          }
         });
       }
     });

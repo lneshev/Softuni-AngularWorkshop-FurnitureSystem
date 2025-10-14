@@ -2,119 +2,126 @@
   <div class="row space-top">
     <div class="col-md-12">
       @if (!id) {
-        <h1>Create New Furniture</h1>
+      <h1>Create New Furniture</h1>
       }
       @if (id) {
-        <h1>Edit Existing Furniture</h1>
+      <h1>Edit Existing Furniture</h1>
       }
+      @if (loading) {
+      <div className="text-center">Loading...</div>
+      }
+      @else {
       <p>Please fill all fields.</p>
+      }
     </div>
   </div>
+  @if (!loading) {
   <form [formGroup]="form" (submit)="!id ? createFurniture() : editFurniture()">
     <div class="row space-top">
       <div class="col-md-4">
         <div class="form-group">
           <label class="form-control-label" for="new-make">Make</label>
           <input class="form-control" id="new-make" type="text" formControlName="make">
-        </div>
-        @if (f.make.touched && f.make.errors?.required) {
+          @if (f.make.touched && f.make.errors?.required) {
           <div class="alert alert-danger">
             This field is required
           </div>
-        }
-        @if (f.make.touched && f.make.errors?.minlength) {
+          }
+          @if (f.make.touched && f.make.errors?.minlength) {
           <div class="alert alert-danger">
             Length must be at least {{f.make.errors?.minlength.requiredLength}} chars
           </div>
-        }
+          }
+        </div>
 
         <div class="form-group has-success">
           <label class="form-control-label" for="new-model">Model</label>
           <input class="form-control is-valid" id="new-model" type="text" formControlName="model">
-        </div>
-        @if (f.model.touched && f.model.errors?.required) {
+          @if (f.model.touched && f.model.errors?.required) {
           <div class="alert alert-danger">
             This field is required
           </div>
-        }
-        @if (f.model.touched && f.model.errors?.minlength) {
+          }
+          @if (f.model.touched && f.model.errors?.minlength) {
           <div class="alert alert-danger">
             Length must be at least {{f.model.errors?.minlength.requiredLength}} chars
           </div>
-        }
+          }
+        </div>
 
         <div class="form-group has-danger">
           <label class="form-control-label" for="new-year">Year</label>
           <input class="form-control is-invalid" id="new-year" type="number" formControlName="year">
-        </div>
-        @if (f.year.touched && f.year.errors?.required) {
+          @if (f.year.touched && f.year.errors?.required) {
           <div class="alert alert-danger">
             This field is required
           </div>
-        }
-        @if (f.year.touched && f.year.errors?.min) {
+          }
+          @if (f.year.touched && f.year.errors?.min) {
           <div class="alert alert-danger">
             Year must start from {{f.year.errors?.min.min}}
           </div>
-        }
-        @if (f.year.touched && f.year.errors?.max) {
+          }
+          @if (f.year.touched && f.year.errors?.max) {
           <div class="alert alert-danger">
             Year must be below {{f.year.errors?.max.max}}
           </div>
-        }
+          }
+        </div>
 
         <div class="form-group">
           <label class="form-control-label" for="new-description">Description</label>
           <input class="form-control" id="new-description" type="text" formControlName="description">
-        </div>
-        @if (f.description.touched && f.description.errors?.required) {
+          @if (f.description.touched && f.description.errors?.required) {
           <div class="alert alert-danger">
             This field is required
           </div>
-        }
-        @if (f.description.touched && f.description.errors?.minlength) {
+          }
+          @if (f.description.touched && f.description.errors?.minlength) {
           <div class="alert alert-danger">
             Length must be at least {{f.description.errors?.minlength.requiredLength}} chars
           </div>
-        }
+          }
+        </div>
       </div>
       <div class="col-md-4">
         <div class="form-group">
           <label class="form-control-label" for="new-price">Price</label>
           <input class="form-control" id="new-price" type="number" formControlName="price">
-        </div>
-        @if (f.price.touched && f.price.errors?.required) {
+          @if (f.price.touched && f.price.errors?.required) {
           <div class="alert alert-danger">
             This field is required
           </div>
-        }
-        @if (f.price.touched && f.price.errors?.min) {
+          }
+          @if (f.price.touched && f.price.errors?.min) {
           <div class="alert alert-danger">
             Min value must be: {{f.price.errors?.min.min}}
           </div>
-        }
+          }
+        </div>
 
         <div class="form-group">
           <label class="form-control-label" for="new-image">Image</label>
           <input class="form-control" id="new-image" type="text" formControlName="image">
-        </div>
-        @if (f.image.touched && f.image.errors?.required) {
+          @if (f.image.touched && f.image.errors?.required) {
           <div class="alert alert-danger">
             This field is required
           </div>
-        }
+          }
+        </div>
 
         <div class="form-group">
           <label class="form-control-label" for="new-material">Material (optional)</label>
           <input class="form-control" id="new-material" type="text" formControlName="material">
         </div>
         @if (!id) {
-          <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Create</button>
+        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Create</button>
         }
         @if (id) {
-          <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Edit</button>
+        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Edit</button>
         }
       </div>
     </div>
   </form>
+  }
 </div>
