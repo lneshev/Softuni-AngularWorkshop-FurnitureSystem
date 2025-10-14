@@ -12,11 +12,11 @@ This is a React + TypeScript + Vite frontend application that replicates the fun
 
 ## Tech Stack
 
-- **React 18** - UI library
+- **React 19** - UI library
 - **TypeScript** - Type safety
 - **Vite** - Build tool and dev server
 - **React Router** - Client-side routing
-- **Bootstrap 4.1.3** - CSS framework (same as original Angular app)
+- **Bootstrap** - CSS framework
 - **Axios** - HTTP client
 - **JWT Decode** - JWT token handling
 
@@ -48,38 +48,6 @@ npm run dev
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
 
-## Project Structure
-
-```
-src/
-├── components/          # React components
-│   ├── Navigation.tsx
-│   ├── Home.tsx
-│   ├── SignIn.tsx
-│   ├── SignUp.tsx
-│   ├── FurnitureAll.tsx
-│   ├── FurnitureAll.module.css
-│   ├── FurnitureUser.tsx
-│   ├── FurnitureDetails.tsx
-│   └── CreateEditFurniture.tsx
-├── guards/              # Route guards
-│   ├── AuthGuard.tsx
-│   └── SuperAdminGuard.tsx
-├── models/              # TypeScript interfaces
-│   └── furniture.ts
-├── services/            # API services
-│   ├── authService.ts
-│   ├── furnitureService.ts
-│   └── jwtInterceptor.ts  # JWT token interceptor
-├── config/              # Configuration files
-│   ├── environment.ts
-│   └── environment.prod.ts
-├── assets/              # Static assets
-│   └── bootstrap.min.css
-├── App.tsx              # Main app component
-└── main.tsx             # App entry point
-```
-
 ## API Integration
 
 The application connects to the same backend API as the Angular version:
@@ -89,7 +57,7 @@ The application connects to the same backend API as the Angular version:
 
 ### JWT Token Management
 
-The application includes a JWT interceptor (`jwtInterceptor.ts`) that automatically:
+The application includes a JWT interceptor that automatically:
 - Adds the `Authorization: Bearer <token>` header to all authenticated requests
 - Handles token expiration by redirecting to the login page on 401 errors
 - Manages token storage and retrieval from localStorage
@@ -112,7 +80,7 @@ This Vite application provides 1:1 functionality with the original Angular app:
 
 ## Bootstrap Styling
 
-The application uses the exact same Bootstrap version (4.1.3) and CSS file as the original Angular app, ensuring:
+The application uses the exact same Bootstrap version and CSS file as the original Angular app, ensuring:
 - Identical visual appearance
 - Same responsive behavior
 - Consistent form styling
@@ -141,7 +109,3 @@ npm run build
 ```
 
 The built files will be in the `dist` directory, ready for deployment.
-
-## Migration from Tailwind
-
-This version was migrated from Tailwind CSS to Bootstrap to match the original Angular app's styling exactly. All components have been rewritten to use Bootstrap classes and maintain the same visual appearance as the original application.
