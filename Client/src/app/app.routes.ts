@@ -11,7 +11,7 @@ import { superAdminGuard } from './authentication/guards/super-admin.guard';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'furniture/all', component: FurnitureAllComponent, canActivate: [AuthGuard] },
