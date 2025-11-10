@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softuni-AngularWorkshop-Fur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softuni-AngularWorkshop-FurnitureSystem-Server.All.Services", "Softuni-AngularWorkshop-FurnitureSystem-Server.All.Services\Softuni-AngularWorkshop-FurnitureSystem-Server.All.Services.csproj", "{B3C530EB-8403-459C-95CB-D0A89CCFB2F3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softuni-AngularWorkshop-FurnitureSystem-Server.Persistence", "Softuni-AngularWorkshop-FurnitureSystem-Server.Persistence\Softuni-AngularWorkshop-FurnitureSystem-Server.Persistence.csproj", "{34DC0D70-B6FB-4D4B-9714-8E061D8FE27F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softuni-AngularWorkshop-FurnitureSystem-Server.All.DataAccess", "Softuni-AngularWorkshop-FurnitureSystem-Server.All.DataAccess\Softuni-AngularWorkshop-FurnitureSystem-Server.All.DataAccess.csproj", "{34DC0D70-B6FB-4D4B-9714-8E061D8FE27F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Core", "Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Core\Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Core.csproj", "{27615617-6355-47E6-9A39-CCF0C8D8DB53}"
 EndProject

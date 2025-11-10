@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Entities.Furniture;
-using Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.Constants;
+using Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.Constants;
 
-namespace Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.EntityConfigurations.Furniture
+namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.EntityConfigurations.Furniture
 {
     public class FurnitureEntityConfiguration : IEntityTypeConfiguration<FurnitureEntity>
     {

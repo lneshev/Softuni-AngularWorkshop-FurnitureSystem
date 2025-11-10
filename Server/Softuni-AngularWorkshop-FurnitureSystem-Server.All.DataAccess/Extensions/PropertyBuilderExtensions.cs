@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Newtonsoft.Json;
 
-namespace Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.Extensions
+namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.Extensions
 {
     public static class PropertyBuilderExtensions
     {

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.Migrations
+namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration

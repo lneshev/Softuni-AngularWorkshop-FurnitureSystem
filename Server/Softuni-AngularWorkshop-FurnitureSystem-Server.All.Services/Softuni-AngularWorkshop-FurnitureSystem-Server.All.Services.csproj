@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Softuni-AngularWorkshop-FurnitureSystem-Server.All.Core\Softuni-AngularWorkshop-FurnitureSystem-Server.All.Core.csproj" />
-    <ProjectReference Include="..\Softuni-AngularWorkshop-FurnitureSystem-Server.Persistence\Softuni-AngularWorkshop-FurnitureSystem-Server.Persistence.csproj" />
+    <ProjectReference Include="..\Softuni-AngularWorkshop-FurnitureSystem-Server.All.DataAccess\Softuni-AngularWorkshop-FurnitureSystem-Server.All.DataAccess.csproj" />
     <ProjectReference Include="..\Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Core\Softuni-AngularWorkshop-FurnitureSystem-Server.Web.Core.csproj" />
   </ItemGroup>
 

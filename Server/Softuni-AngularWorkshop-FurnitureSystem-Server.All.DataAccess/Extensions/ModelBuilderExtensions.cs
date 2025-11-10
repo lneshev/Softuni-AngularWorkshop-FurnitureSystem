@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.Extensions
+namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.Extensions
 {
     /// <summary>
     /// EF Core ModelBuilder extensions

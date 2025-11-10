@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using MoravianStar.Exceptions;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Constants.Security;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Entities.Security;
-using Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.DbContexts;
+using Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.DbContexts;
 using System;
 using System.Threading.Tasks;
 

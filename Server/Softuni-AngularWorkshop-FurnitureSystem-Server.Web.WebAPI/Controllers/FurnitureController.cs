@@ -6,7 +6,7 @@ using MoravianStar.WebAPI.Controllers;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Entities.Furniture;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Extensions.Security;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Filters.Furniture;
-using Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.DbContexts;
+using Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.DbContexts;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.Web.Core.Models.Furniture;
 using System.Collections.Generic;
 using System.Threading.Tasks;

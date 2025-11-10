@@ -3,20 +3,18 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.DbContexts;
+using Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.DbContexts;
+
 
 #nullable disable
 
-namespace Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.Migrations
+namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240621142611_Initial")]
-    partial class Initial
+    partial class AppDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

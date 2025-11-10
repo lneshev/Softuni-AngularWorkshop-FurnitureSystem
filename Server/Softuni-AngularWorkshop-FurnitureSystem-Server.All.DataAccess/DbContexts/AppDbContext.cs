@@ -6,8 +6,8 @@ using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Entities;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Entities.Security;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Extensions.Security;
 using Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core.Resources;
-using Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.EntityConfigurations.Furniture;
-using Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.EntityConfigurations.Security;
+using Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.EntityConfigurations.Furniture;
+using Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.EntityConfigurations.Security;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,7 +15,7 @@ using System.Security;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.DbContexts
+namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.DbContexts
 {
     public class AppDbContext : IdentityDbContext<UserEntity, RoleEntity, Guid>
     {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.DbContexts;
+using Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.DbContexts;
 using System.Threading.Tasks;
 
 namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.Services.Common

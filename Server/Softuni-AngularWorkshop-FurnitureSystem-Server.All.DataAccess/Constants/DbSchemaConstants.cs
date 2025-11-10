@@ -1,4 +1,4 @@
-﻿namespace Softuni_AngularWorkshop_FurnitureSystem_Server.Persistence.Constants
+﻿namespace Softuni_AngularWorkshop_FurnitureSystem_Server.All.DataAccess.Constants
 {
     /// <summary>
     /// Contains constants related to naming of database objects like schemas, tables, views, etc.
