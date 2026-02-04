@@ -1,16 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>Softuni_AngularWorkshop_FurnitureSystem_Server.All.Core</RootNamespace>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="9.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="10.0.2" />
     <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.15.0" />
-    <PackageReference Include="MoravianStar" Version="1.49.1" />
+    <PackageReference Include="MoravianStar" Version="1.51.0" />
   </ItemGroup>
 
   <ItemGroup>
